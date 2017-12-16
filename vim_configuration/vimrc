@@ -1,0 +1,27 @@
+set nu                          " 设置行号
+syntax on                       " 打开语法高亮
+set autoindent                  " 自动缩进
+set tabstop=4                   " 设置tab长度
+set expandtab                   " 使用空格替代tab
+set spell                       " 打开拼写检查
+set fdm=syntax                  " 代码折叠方式
+set tags=tags
+
+" 配色方案1
+"let g:molokai_original=1
+
+" 配色方案2
+set background=dark
+colorscheme solarized8
+
+let Tlist_Auto_Open=1           " 开启vim后自动打开taglist
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Left_Window=1
+
+" 保存文件时自动将tab替换成空格
+autocmd BufWritePre * :%retab!
+
+" 设置nerd插件的启动快捷健为ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+" 关闭文件时，自动退出nerdtree窗口
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
