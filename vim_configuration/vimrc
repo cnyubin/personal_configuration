@@ -19,7 +19,7 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Left_Window=1
 
 " 保存文件时自动将tab替换成空格
-autocmd BufWritePre * :%retab!
+"autocmd BufWritePre * :%retab!
 
 " 设置nerd插件的启动快捷健为ctrl + n
 map <C-n> :NERDTreeToggle<CR>
